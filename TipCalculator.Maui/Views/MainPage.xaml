@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.Maui.Views.MainPage"
+             Title="Calculadora de propinas">
+    <Grid
+        RowDefinitions="Auto,Auto,Auto"
+        ColumnDefinitions="*"
+        RowSpacing="16"
+        Padding="24">
+        <Border
+            Grid.Row="0"
+            Grid.Column="0">
+            <Grid
+                RowDefinitions="*,*,*,*"
+                ColumnDefinitions="Auto,*,Auto"
+                Padding="16"
+                RowSpacing="8"
+                ColumnSpacing="8">
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="Importe:"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"/>
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="WhiteSmoke"
+                    TextColor="Black"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalOptions="End"
+                    Text="# de personas:"
+                    VerticalOptions="Center"/>
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    BackgroundColor="WhiteSmoke"
+                    TextColor="Black"/>
+                <Stepper
+                    Grid.Column="2"
+                    Grid.Row="1"/>
+                <HorizontalStackLayout
+                    Grid.Row="2"
+                    Grid.ColumnSpan="3"
+                    Grid.Column="0"
+                    Spacing="15"
+                    HorizontalOptions="Center"
+                    >
+                    <Button
+                        Text="8 %"
+                        WidthRequest="75"/>
+                    <Button
+                        Text="10 %"
+                        WidthRequest="75"/>
+                    <Button
+                        Text="12.5 %"
+                        WidthRequest="75"/>
+                    <Button
+                        Text="15 %"
+                        WidthRequest="75"/>
+                </HorizontalStackLayout>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="% de propina:"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"/>
+                <Entry
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    BackgroundColor="WhiteSmoke"
+                    TextColor="Black"/>
+                <Stepper
+                    Grid.Column="2"
+                    Grid.Row="3"/>
+
+            </Grid>
+        </Border>
+        <HorizontalStackLayout
+            Grid.Column="0"
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            Spacing="24">
+            <Button
+                Text="Calcular"/>
+            <Button
+                Text="Limpiar"/>
+        </HorizontalStackLayout>
+        <Border
+            Grid.Row="2"
+            Grid.Column="0">
+            <Grid
+                RowDefinitions="*,*,*,*,*,*"
+                ColumnDefinitions="*,Auto"
+                ColumnSpacing="4"
+                Padding="16"
+                RowSpacing="8">
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="Importe del consumo"/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Text="$1500.00"
+                    HorizontalTextAlignment="End"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Text="Importe del consumo por persona: "/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Text="$ 500.00"
+                    HorizontalTextAlignment="End"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Text="Importe de la propina:"/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Text="$150.00"
+                    HorizontalTextAlignment="End"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="Propina por persona:"/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Text="$50.00"
+                    HorizontalTextAlignment="End"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Text="Importe total con propina"/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Text="$1,650.00"
+                    HorizontalTextAlignment="End"/>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Text="Importe con propina por persona"/>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    Text="$550"
+                    HorizontalTextAlignment="End"/>
+            </Grid>
+        </Border>
+        
+    </Grid>
+    
+</ContentPage>
