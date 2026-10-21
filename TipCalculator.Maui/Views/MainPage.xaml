@@ -86,9 +86,11 @@
             HorizontalOptions="Center"
             Spacing="24">
             <Button
-                Text="Calcular"/>
+                Text="Calcular"
+                BackgroundColor="Green"/>
             <Button
-                Text="Limpiar"/>
+                Text="Limpiar"
+                Background="Red"/>
         </HorizontalStackLayout>
         <Border
             Grid.Row="2"
