@@ -18,6 +18,8 @@ namespace TipCalculator.Maui.ViewModels
         private string _porcentajeDePropina;
         //Variables de instancia para resultados de la IU
         [ObservableProperty]
+        public string _importeDelConsumoDuplicado;
+        [ObservableProperty]
         public string _importeDelConsumoPorPersona;
         [ObservableProperty]
         public string _ImporteDeLaPropina;
@@ -45,6 +47,7 @@ namespace TipCalculator.Maui.ViewModels
             if (importeDelConsumoEsValido && numeroDePersonasEsValido && porcentajeDePropinaEsValido)
             {
                 var consumo = new ConsumoCompartido(importeDelConsumo, numeroDePersonas, porcentajeDePropina);
+                ImporteDelConsumoDuplicado = consumo.ImporteDelConsumo.ToString("C2");
                 ImporteDelConsumoPorPersona = consumo.ImporteDelConsumoPorPersona.ToString("C2");
                 ImporteDeLaPropina = consumo.ImporteDeLaPropina.ToString("C2");
                 ImporteDeLaPropinaPorPersona = consumo.ImportedeLaPropinaPorPersona.ToString("C2");
@@ -56,13 +59,19 @@ namespace TipCalculator.Maui.ViewModels
         public void Limpiar()
         {
             ImporteDelConsumo = string.Empty;
-            NumeroDePersonas = string.Empty;
-            PorcentajeDePropina = string.Empty;
+            NumeroDePersonas = "1";
+            PorcentajeDePropina = "10";
+            ImporteDelConsumoDuplicado = string.Empty;
             ImporteDelConsumoPorPersona = string.Empty;
             ImporteDeLaPropina = string.Empty;
             ImporteDeLaPropinaPorPersona = string.Empty;
             ImporteTotalConPropina = string.Empty;
             ImporteTotalConPropinaPorPersona = string.Empty;
+        }
+        [RelayCommand]
+        public void ActualizarPorcentajeDepropina(string nuevoPorcentaje)
+        {
+            PorcentajeDePropina = nuevoPorcentaje;
         }
     }
 }
